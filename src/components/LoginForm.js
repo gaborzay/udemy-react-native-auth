@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {Text} from 'react-native';
-import firebase from 'firebase';
+import React, {Component} from "react";
+import {Text} from "react-native";
+import firebase from "firebase";
 import {Button, Card, CardSection, Input, Spinner} from "./common";
 
 class LoginForm extends Component {
@@ -9,7 +9,7 @@ class LoginForm extends Component {
     onButtonPress() {
         const {email, password} = this.state;
 
-        this.setState({error: '', loading: true});
+        this.setState({error: "", loading: true});
 
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(this.onLoginSuccess.bind(this))
@@ -22,9 +22,9 @@ class LoginForm extends Component {
 
     onLoginSuccess() {
         this.setState({
-            email: '',
-            password: '',
-            error: '',
+            email: "",
+            password: "",
+            error: "",
             loading: false
         });
     }
@@ -35,13 +35,11 @@ class LoginForm extends Component {
 
     renderButton() {
         if (this.state.loading) {
-            return <Spinner size="small"/>
+            return <Spinner size="small"/>;
         }
 
         return (
-            <Button onPress={this.onButtonPress.bind(this)}>
-                Log in
-            </Button>
+            <Button onPress={this.onButtonPress.bind(this)}>Log in</Button>
         );
     }
 
@@ -82,8 +80,8 @@ class LoginForm extends Component {
 const styles = {
     errorTextStyle: {
         fontSize: 20,
-        alignSelf: 'center',
-        color: 'red'
+        alignSelf: "center",
+        color: "red"
     }
 };
 

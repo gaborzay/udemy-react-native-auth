@@ -1,5 +1,5 @@
-import React from 'react';
-import {View} from 'react-native';
+import React from "react";
+import {View} from "react-native";
 
 const Card = (props) => {
     const {containerStyle} = styles;
@@ -15,9 +15,9 @@ const styles = {
     containerStyle: {
         borderWidth: 1,
         borderRadius: 2,
-        borderColor: '#ddd',
+        borderColor: "#ddd",
         borderBottomWidth: 0,
-        shadowColor: '#000000',
+        shadowColor: "#000000",
         shadowOffset: {
             width: 0,
             height: 2
