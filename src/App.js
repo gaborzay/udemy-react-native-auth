@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { View } from 'react-native';
+import React, {Component} from 'react';
+import {View} from 'react-native';
 import firebase from 'firebase';
-import { Header } from "./components/common";
+import {Header} from "./components/common";
 import LoginForm from "./components/LoginForm";
 
 class App extends Component {
@@ -16,10 +16,10 @@ class App extends Component {
         })
     }
 
-    render () {
+    render() {
         return (
             <View>
-                <Header headerText="Authentication" />
+                <Header headerText="Authentication"/>
                 <LoginForm/>
             </View>
         );
